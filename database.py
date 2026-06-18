@@ -2,7 +2,7 @@ import sqlite3
 import json
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "reviews.db")
+DB_PATH = os.path.join(os.path.sep, "tmp", "reviews.db")
 
 
 def get_connection():
