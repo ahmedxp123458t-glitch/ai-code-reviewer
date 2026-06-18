@@ -12,8 +12,9 @@ from database import init_db
 load_dotenv()
 
 app = FastAPI(title="AI Code Reviewer")
-
-init_db()
+@app.on_event("startup")
+async def startup():
+    init_db()
 
 HTML_DIR = os.path.join(os.path.dirname(__file__), "templates")
 
